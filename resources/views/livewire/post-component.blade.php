@@ -56,7 +56,24 @@
 
         @endforeach
     </tbody>
+
+    <tbody class="divide-y divide-gray-200">
+        @foreach ($posts as $post)
+
+        <tr class="text-sm text-gray-500">
+            <td class="px-6 py-4">{{$post->id}}</td>
+            <td class="px-6 py-4">{{$post->name}}</td>
+            <td class="px-6 py-4">{{$post->body}}</td>
+            <td class="px-6 py-4">
+
+                <button wire:click='edit({{$post}})' class="bg-blue-500 hover:bg-blue-700 mb-2 text-white px-4 py-2 rounded w-full">Editar</button>
+
+                <button wire:click='destroy({{$post}})' class="bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded">Eliminar</button></td>
+        </tr>
+
+        @endforeach
+    </tbody>
+
 </table>
 </div>
 
-endpoint
