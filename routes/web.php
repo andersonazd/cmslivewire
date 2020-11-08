@@ -14,8 +14,12 @@ use App\Http\Livewire\PostComponent;
 |
 */
 
-Route::get('/', PostComponent::class);
+Route::get('/', 'welcome');
+Route::get('/a', PostComponent::class);
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+se realiza cambio a proyecto cococtero

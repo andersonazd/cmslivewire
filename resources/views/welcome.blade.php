@@ -19,7 +19,7 @@
             ]
         @endphp
 
-        <livewire:paises/>
+        <livewire:post-component/>
 
     @livewireScripts
     </body>
